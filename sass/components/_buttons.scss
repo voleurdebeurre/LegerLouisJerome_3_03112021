@@ -7,8 +7,9 @@
   text-decoration: none;
   font-weight: $fw-bold;
   text-align: center;
+  box-shadow: $box-shadow;
 
-  &:before {
+  &::before {
     border-radius: 50px;
   }
 }

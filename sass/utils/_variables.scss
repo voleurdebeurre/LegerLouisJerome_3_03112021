@@ -20,9 +20,9 @@ $br-phone: 640px;
 $br-tablet: 768px;
 $br-desktop: 1024px;
 
-$num-menu-items: 3;
+$num-menu-items: 4;
 $anim-dur: .8s;
-$anim-delay: $anim-dur / $num-menu-items;
+$anim-delay: math.div($anim-dur, $num-menu-items);
 
 @mixin gradient-main($property, $angle){
   #{$property}: linear-gradient($angle, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);

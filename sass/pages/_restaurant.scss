@@ -37,10 +37,9 @@
       width: 60%;
     }
 
-    &__subsection{
+    &__subsection {
       padding: 1rem 0;
-
-      &__item{
+      &__item {
         animation: $anim-dur ease-out menuItemApparition forwards;
         opacity: 0;
         display: flex;
@@ -48,7 +47,7 @@
         background: $colour-white;
         border-radius: 20px;
         box-shadow: $box-shadow;
-        padding: 1rem;
+        padding: 0 0 0 1rem;
         margin: 1rem 0;
 
         @for $i from 1 through $num-menu-items {
@@ -56,15 +55,46 @@
               animation-delay: $anim-delay * $i;
            }
         }
+
+        &:hover {
+          .component--checkbox {
+            transition: width .3s ease-in;
+            width: 75px;
+            i {
+              opacity: 1;
+              transform: rotate(0deg);
+              transition: all .3s ease-in;
+            }
+          }
+        }
+
+        &--text{
+          padding: 1rem 0;
+        }
       }
 
       .component--price{
+        padding: 0 1rem 1rem 0;
         align-self: flex-end;
         margin-left: auto;
       }
 
       .component--checkbox{
-        display: none;
+        display: flex;
+        border-radius: 0 20px 20px 0;
+        width: 0px;
+        align-items: center;
+        justify-content: center;
+        background: $colour-light-green;
+        transition: width .3s ease-in;
+
+        i{
+          opacity: 0;
+          transform: rotate(-360deg);
+          color: $colour-white;
+          font-size: $fs-l;
+          transition: all .3s ease-in;
+        }
       }
     }
   }
