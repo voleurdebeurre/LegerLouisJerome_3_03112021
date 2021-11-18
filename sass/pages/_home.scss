@@ -1,0 +1,156 @@
+.header__location {
+  background: transparentize($colour-primary, .90);
+  padding: 1rem 0;
+
+  &--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .825rem;
+
+    svg {
+      color:  transparentize($colour-primary, .5);
+      font-size: $fs-m;
+    }
+
+    p {
+      font-size: $fs-s;
+      color:  transparentize($colour-primary, .5);
+      font-weight: $fw-bold;
+    }
+  }
+}
+
+.header__tagline {
+  background: transparentize($colour-primary, .96);
+  padding: 2rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+
+  a{
+    display: block;
+    width: 80%;
+    margin: 0 auto 1rem auto;
+    box-shadow: $box-shadow;
+  }
+}
+
+.howto {
+  &__item {
+    width: 90%;
+    margin: 0 auto;
+
+    ol {
+      counter-reset: steps;
+      list-style: none;
+
+      li {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        counter-increment: steps;
+        background: transparentize($colour-primary, .96);
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        margin: 1.5em 0;
+        box-shadow: $box-shadow;
+        font-weight: $fw-bold;
+
+        &:before {
+          content: counter(steps);
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: -13px;
+          top: calc(50% - 13px);
+          width: 26px;
+          height: 26px;
+          background: $colour-secondary;
+          color: $colour-white;
+          border-radius: 50%;
+          font-style: normal;
+        }
+
+        i {
+          color:  transparentize($colour-primary, .5);
+          font-size: $fs-m;
+        }
+
+        &:hover{
+          background: transparentize($colour-secondary, .80);
+
+          i {
+            color: $colour-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.restaurants{
+  background: transparentize($colour-primary, .96);
+
+  &__item {
+    margin: 1.5rem 0;
+
+    a{
+      display: block;
+      transition: all .5s;
+
+      &:hover{
+        transform: scale(101%);
+        transition: all .5s;
+      }
+    }
+
+    &--image {
+      position: relative;
+
+      img {
+        border-radius: 20px 20px 0 0;
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: $colour-light-green;
+        border-radius: 2px;
+        padding: .4rem .6rem;
+        color: $colour-green;
+        font-weight: $fw-bold;
+        font-size: $fs-xs;
+      }
+    }
+
+    &--text {
+      background: $colour-white;
+      border-radius: 0 0 20px 20px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      box-shadow: $box-shadow;
+    }
+
+    &__container--text{
+      width: 90%;
+    }
+
+  }
+}

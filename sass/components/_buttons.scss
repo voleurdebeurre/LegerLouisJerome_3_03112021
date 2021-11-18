@@ -1,3 +1,14 @@
-.btn {
-    @include btn
+.main-cta{
+  display: block;
+  @include gradient-animation(0.7s, -10deg, 10deg);
+  padding: 1.25rem 2rem;
+  border-radius: 50px;
+  color: $colour-white;
+  text-decoration: none;
+  font-weight: $fw-bold;
+  text-align: center;
+
+  &:before {
+    border-radius: 50px;
+  }
 }

@@ -1,0 +1,71 @@
+.restaurant{
+  padding: 0;
+
+  &--image{
+    position: relative;
+    z-index: 2;
+    img{
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  &__header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 3;
+    margin: -50px 0 0 0;
+    padding: 2rem 1rem 0 1rem;
+    border-radius: 50px 50px 0 0;
+    background: lighten($colour-primary, 96%);
+  }
+
+  .component--hearticons{
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  &__menu{
+    background: lighten($colour-primary, 96%);
+    padding: 1rem;
+
+    .main-cta{
+      margin: 2rem auto;
+      width: 60%;
+    }
+
+    &__subsection{
+      padding: 1rem 0;
+
+      &__item{
+        animation: $anim-dur ease-out menuItemApparition forwards;
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        background: $colour-white;
+        border-radius: 20px;
+        box-shadow: $box-shadow;
+        padding: 1rem;
+        margin: 1rem 0;
+
+        @for $i from 1 through $num-menu-items {
+          &--#{$i} {
+              animation-delay: $anim-delay * $i;
+           }
+        }
+      }
+
+      .component--price{
+        align-self: flex-end;
+        margin-left: auto;
+      }
+
+      .component--checkbox{
+        display: none;
+      }
+    }
+  }
+}

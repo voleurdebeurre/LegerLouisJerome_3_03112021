@@ -1,19 +1,21 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
+@import "./utils/_variables";
 
-@import "./base/base";
-@import "./base/typography";
+@import "./base/_base";
+@import "./base/_typography";
 
-@import "./components/buttons";
+@import "./components/_buttons";
 
-@import "./layout/header";
-@import "./layout/nav";
-@import "./layout/container";
-@import "./layout/form";
+@import "./pages/_home";
+@import "./pages/_restaurant";
 
+@import "./base/_mediaqueries";
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+@keyframes menuItemApparition {
+    0% {
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

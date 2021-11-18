@@ -6,12 +6,127 @@
     box-sizing: inherit;
 }
 
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
-}
-
 body {
     box-sizing: border-box;
-    background: $colour-secondary;
+    background: $colour-white;
+}
+
+section{
+  padding: 2.5rem 1rem;
+}
+
+.content__wrapper{
+  width: 100%;
+
+  @media (min-width: $br-desktop) {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+header{
+  position: relative;
+
+  h4 {
+    box-shadow: $box-shadow;
+    display: block;
+    text-align: center;
+    padding: .725rem 0;
+  }
+
+  .fa-arrow-left {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: $fs-l;
+    color: transparentize($colour-primary, .4);
+
+    &:hover{
+      color: $colour-secondary;
+    }
+  }
+}
+
+.component{
+
+  &--title {
+    font-weight: $fw-bold;
+    font-size: $fs-m;
+    margin: 0 0 .325rem 0;
+  }
+
+  &--desc {
+    font-weight: $fw-light;
+    font-size: $fs-s;
+  }
+
+  &--price{
+    font-weight: $fw-bold;
+    font-size: $fs-xs;
+    color: lighten($colour-primary, 30%);
+  }
+
+  &--hearticons{
+    cursor: pointer;
+    align-self: center;
+    width: 2rem;
+
+    .heart-stroke{
+      display: block;
+      align-self: center;
+      color: $colour-primary;
+      font-size: $fs-xl;
+    }
+
+    .heart-full{
+      display: none;
+    }
+
+    &:hover{
+
+      .heart-stroke{
+        display: none;
+      }
+
+      .heart-full{
+        display: block;
+        align-self: center;
+        @include gradient-main(background, -10deg);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: $fs-xl;
+      }
+    }
+  }
+}
+
+footer{
+  background: transparentize($colour-primary, .2);
+
+  ul{
+    list-style: none;
+    padding: 1rem 2rem;
+
+    li{
+      text-align: left;
+      color: $colour-white;
+      padding: .25rem 0;
+
+      a{
+        color: $colour-white;
+      }
+
+      h4{
+        font-size: $fs-m;
+        font-weight: $fw-normal;
+        text-align: left;
+        padding: .325rem 0;
+      }
+
+      i{
+        font-size: $fs-xs;
+        margin: 0 0.325rem 0 0;
+      }
+    }
+  }
 }

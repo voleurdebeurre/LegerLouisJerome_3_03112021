@@ -1,0 +1,62 @@
+@media (min-width: $br-tablet) {
+
+  .content__wrapper{
+    width: 60%;
+    min-width: 768px;
+    margin: 0 auto;
+  }
+
+  .howto {
+    h3 {
+      text-align: center;
+    }
+
+    &__item {
+      margin: 2rem auto 0 auto;
+      ol {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        justify-content: center;
+
+        li {
+          flex-direction: column;
+          row-gap: 1rem;
+          align-items: center;
+          text-align: center;
+
+          &:before {
+            left: calc(50% - 13px);
+            top: -13px;
+          }
+        }
+      }
+    }
+  }
+
+  .restaurants{
+    h3 {
+      text-align: center;
+    }
+
+    .content__wrapper{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 2rem;
+      margin: 2rem auto 0 auto;
+    }
+
+    &__item {
+      min-width: 364px;
+    }
+  }
+}
+
+@media (min-width: $br-desktop) {
+
+  .content__wrapper{
+    max-width: 1000px;
+  }
+}
