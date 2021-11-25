@@ -1,3 +1,5 @@
+// STYLES FOR HOME PAGE
+
 .header__location {
   background: transparentize($colour-primary, .90);
   padding: 1rem 0;
@@ -9,7 +11,7 @@
     align-items: center;
     column-gap: .825rem;
 
-    svg {
+    i {
       color:  transparentize($colour-primary, .5);
       font-size: $fs-m;
     }

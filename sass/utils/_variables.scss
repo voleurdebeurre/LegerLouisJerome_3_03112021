@@ -1,10 +1,17 @@
+//COLORS VARIABLES
+
 $colour-primary: rgba(0,0,0,1);
 $colour-secondary: rgba(147,86,220,1);
 $colour-white: rgba(255,255,255,1);
 $colour-green: rgba(0,135,102,1);
 $colour-light-green: rgba(153,226,208,1);
 
-$box-shadow: 0 4px 5px -4px transparentize($colour-primary, .8);
+//BOX SHADOW
+
+$box-shadow: 0 4px 5px -4px transparentize($colour-primary, .2);
+$box-shadow-strong: 0 4px 8px -4px $colour-primary;
+
+//FONT SIZES
 
 $fs-xs: 0.875em;
 $fs-s: 1em;
@@ -12,13 +19,18 @@ $fs-m: 1.125em;
 $fs-l: 1.5em;
 $fs-xl: 1.725em;
 
+//FONT WEIGHTS
+
 $fw-light: 200;
 $fw-normal: 400;
 $fw-bold: 700;
 
+//BREAKPOINTS
+
 $br-phone: 640px;
 $br-tablet: 768px;
 $br-desktop: 1024px;
+
 
 $num-menu-items: 4;
 $anim-dur: .8s;
@@ -28,27 +40,15 @@ $anim-delay: math.div($anim-dur, $num-menu-items);
   #{$property}: linear-gradient($angle, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
 }
 
-@mixin gradient-animation($transTime, $angleStart, $angleEnd){
+@mixin gradient-animation($transTime, $lightenPercent){
   background-size: 100%;
-  background-image: linear-gradient($angleStart, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
+  background-image: linear-gradient(0, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
   position: relative;
   z-index: 100;
+  transition: all, .5s;
 
-  &:before {
-    background-image: linear-gradient($angleEnd, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    opacity: 0;
-    width: 100%;
-    z-index: -100;
-    transition: opacity $transTime;
-  }
   &:hover {
-     &:before {
-       opacity: 1;
-     }
+    background-image: linear-gradient(0, lighten(rgba(170,94,219, 1), $lightenPercent) 0%, lighten(rgba(232,114,218, 1), $lightenPercent) 100%);
+    transition: all, .5s;
   }
 }

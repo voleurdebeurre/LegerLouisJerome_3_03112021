@@ -19,11 +19,11 @@ h4 {
     font-size: $fs-xl;
 }
 
-h5{
+h5 {
   font-weight: $fw-light;
   font-size: $fs-s;
 
-  &::after{
+  &::after {
     content: "";
     display: block;
     width: 3rem;
@@ -33,7 +33,7 @@ h5{
   }
 }
 
-a{
+a {
   color: $colour-primary;
   text-decoration: none;
 }

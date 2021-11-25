@@ -1,4 +1,7 @@
 @use "sass:math";
+
+// IMPORTS ALL PAGES
+
 @import "./utils/_variables";
 
 @import "./base/_base";
@@ -10,6 +13,9 @@
 @import "./pages/_restaurant";
 
 @import "./base/_mediaqueries";
+
+
+// ANIM PARAMETERS FOR MENU ITEMS
 
 @keyframes menuItemApparition {
     0% {

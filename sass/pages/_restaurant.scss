@@ -1,3 +1,5 @@
+// STYLES FOR RESTAURANTS PAGES
+
 .restaurant{
   padding: 0;
 
@@ -49,9 +51,12 @@
         box-shadow: $box-shadow;
         padding: 0 0 0 1rem;
         margin: 1rem 0;
+        min-width: 272px;
 
+        // LOOPS THROUGH RESTAURANTS ITEMS
         @for $i from 1 through $num-menu-items {
           &--#{$i} {
+              // ADDS DELAY .2s TO EACH ITEM FOUND
               animation-delay: $anim-delay * $i;
            }
         }
@@ -70,6 +75,7 @@
 
         &--text{
           padding: 1rem 0;
+          min-width: 190px;
         }
       }
 

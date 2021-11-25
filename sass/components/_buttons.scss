@@ -1,6 +1,6 @@
 .main-cta{
   display: block;
-  @include gradient-animation(0.7s, -10deg, 10deg);
+  @include gradient-animation(0.7s, 5%);
   padding: 1.25rem 2rem;
   border-radius: 50px;
   color: $colour-white;
@@ -8,8 +8,14 @@
   font-weight: $fw-bold;
   text-align: center;
   box-shadow: $box-shadow;
+  transition: all, .2s;
 
   &::before {
     border-radius: 50px;
+  }
+
+  &:hover{
+    box-shadow: $box-shadow-strong;
+    transition: all, .2s;
   }
 }
