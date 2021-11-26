@@ -82,8 +82,9 @@ header{
       transform: scale(0);
       font-size: $fs-xl;
       background : linear-gradient(0, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      margin-top: -0.05rem;
       opacity: 0;
 
       &::before{
@@ -97,25 +98,36 @@ header{
       position: absolute;
       display: block;
       font-size: $fs-xl;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: $colour-primary;
+      background-clip: text;
+      color: $colour-white;
+      text-shadow: -1px -1px 0 $colour-primary,
+                    1px -1px 0 $colour-primary,
+                    -1px 1px 0 $colour-primary,
+                    1px 1px 0 $colour-primary;
+      transition: all 1s;
     }
 
     &:hover{
 
+      .heart-stroke{
+        text-shadow: -1px -1px 0 $colour-white,
+                      1px -1px 0 $colour-white,
+                      -1px 1px 0 $colour-white,
+                      1px 1px 0 $colour-white;
+        transition: all 1s;
+      }
+
       .heart-full{
         display: block;
-        transform-origin: center 3px;
-        transform: scale(1.01);
+        transform-origin: center center;
+        transform: scale(1);
         opacity: 1;
       }
 
       .heart-full::before{
         display: block;
-        transform-origin: center 3px;
-        transform: scale(1.01);
+        transform-origin: center center;
+        transform: scale(1);
         transition: all .5s;
         opacity: 1;
       }
