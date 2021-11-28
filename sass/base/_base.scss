@@ -24,6 +24,27 @@ section{
   }
 }
 
+.loader{
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background: $colour-white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  animation: loaderAnimation 2s ease-out;
+
+  img{
+    width: 50px;
+    height: 50px;
+    animation: loaderAnimationSpiner .6s infinite ease-in;
+  }
+}
+
 header{
   position: relative;
 
