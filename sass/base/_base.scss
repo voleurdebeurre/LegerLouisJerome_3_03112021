@@ -25,7 +25,7 @@ section{
 }
 
 .loader{
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -103,7 +103,10 @@ header{
       position: absolute;
       transform: scale(0);
       font-size: $fs-xl;
-      @include gradient-main(background, 0deg);
+      width: 100%;
+      @include gradient-main(background-image, 0deg);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
       margin-top: -0.05rem;
@@ -121,6 +124,7 @@ header{
       display: block;
       font-size: $fs-xl;
       background-clip: text;
+      -webkit-background-clip: text;
       color: $colour-white;
       text-shadow: -1px -1px 0 $colour-primary,
                     1px -1px 0 $colour-primary,
@@ -147,11 +151,16 @@ header{
       }
 
       .heart-full::before{
-        display: block;
+        @include gradient-main(background-image, 0deg);
+        display: inline-block;
         transform-origin: center center;
         transform: scale(1);
         transition: all .5s;
         opacity: 1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
