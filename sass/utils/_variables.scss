@@ -76,3 +76,15 @@ $anim-delay: math.div($anim-dur, $num-menu-items);
     transform: rotate(360deg);
   }
 }
+
+// ANIM PARAMETERS FOR MENU ITEMS
+
+@keyframes menuItemApparition {
+    0% {
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

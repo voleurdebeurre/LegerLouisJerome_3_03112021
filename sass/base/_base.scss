@@ -103,7 +103,7 @@ header{
       position: absolute;
       transform: scale(0);
       font-size: $fs-xl;
-      background : linear-gradient(0, rgba(170,94,219, 1) 0%, rgba(232,114,218, 1) 100%);
+      @include gradient-main(background, 0deg);
       background-clip: text;
       color: transparent;
       margin-top: -0.05rem;

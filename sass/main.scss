@@ -13,16 +13,3 @@
 @import "./pages/_restaurant";
 
 @import "./base/_mediaqueries";
-
-
-// ANIM PARAMETERS FOR MENU ITEMS
-
-@keyframes menuItemApparition {
-    0% {
-        transform: translateY(-20%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
