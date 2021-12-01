@@ -37,6 +37,7 @@ section{
   align-items: center;
   justify-content: center;
   animation: loaderAnimation 2s ease-out;
+  visibility: hidden;
 
   img{
     width: 50px;
